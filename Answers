@@ -138,6 +138,10 @@ SELECT * FROM users;
 
 //Section 6
 //1. Conceptual Question
+//You have to first prepare your Node.js application and Azure environment to host it. Then you can deploy your application 
+//to Azure using Github by connecting your GitHub account and authorize Azure to access your repositories. Select the repository and branch you want to deploy.
+//Then ensure your configuration settings are correct.
+//Azure App Services offers several benefits for hosting applications, with one of the most common and significant advantages being scalability and ease of management.
 
 //Section 7
 //1. Coding Challenge
@@ -153,4 +157,7 @@ function register_greeting_shortcode() {
 
 // Hook the register function into the 'init' action
 add_action('init', 'register_greeting_shortcode');
-
+//2. Conceptual Question
+//In WordPress, posts and pages are both types of content, but they serve different purposes and are used in different contexts. 
+//Posts are intended for regularly updated content that engages readers and encourages interaction.
+//Pages are intended for static content that provides information about your site or organization.
