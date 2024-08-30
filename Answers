@@ -13,7 +13,8 @@ function transformArray(arr) {
   });
 }
 //2. Conceptual Question
-//The == operator compares the values of two variables after performing type conversion if necessary. On the other hand, the === operator compares the values of two variables without performing type conversion. 
+//The == operator compares the values of two variables after performing type conversion if necessary. 
+//On the other hand, the === operator compares the values of two variables without performing type conversion. 
 
 //Section 2
 //1. Coding Challenge
@@ -55,7 +56,10 @@ function Counter() {
 
 export default Counter;
 //2.  Conceptual Question
-//
+//The useEffect hook in React is used to perform side effects in function components. 
+//Side effects are operations that can interact with the outside world or have some impact outside the component itself.
+//You use useEffect hook when you want to fetch user data from an API when a component mounts and display it.
+
 
 //Section 3
 //1. Coding Challenge
@@ -73,6 +77,8 @@ app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
 //2.  Conceptual Question
+//Node.js handles asynchronous operations through event loops, callback functions, promises and async/await, worker threads and libraries.
+//The benefits of asynchronous handling in Node.js is non-blocking I/O, scalability, responsiveness, and efficient resource utilization.
 
 //Section 4
 //1. Coding Challenge
@@ -112,6 +118,8 @@ const ItemsPage = ({ items }) => {
 
 export default ItemsPage;
 //2.  Conceptual Question
+//In Next.js, both getStaticProps and getServerSideProps are data-fetching methods used to fetch data and pass it to a page component. 
+//However, getStaticProps is used for pages that can be pre-rendered at build time, and getServerSideProps is used for pages that need real-time data on every request.
 
 //Section 5
 //1. Coding Challenge
@@ -124,6 +132,9 @@ INSERT INTO users (name, email)
 VALUES ('John Doe', 'john.doe@example.com');
 SELECT * FROM users;
 //2.  Conceptual Question
+//In PostgreSQL, a primary key is a specific column or set of columns that uniquely identifies each row in a table.
+//A primary key is crucial in PostgreSQL for ensuring the uniqueness and integrity of data in a table, 
+//optimizing query performance, and supporting relational database design through the use of foreign keys.
 
 //Section 6
 //1. Conceptual Question
