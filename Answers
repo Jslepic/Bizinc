@@ -1,0 +1,134 @@
+//Section 1
+//1. Coding Challenge
+function transformArray(arr) {
+  return arr.map(num => {
+    // Check if the number is even
+    if (num % 2 === 0) {
+      // Double the even number
+      return num * 2;
+    } else {
+      // Keep the odd number unchanged
+      return num;
+    }
+  });
+}
+//2. Conceptual Question
+//The == operator compares the values of two variables after performing type conversion if necessary. On the other hand, the === operator compares the values of two variables without performing type conversion. 
+
+//Section 2
+//1. Coding Challenge
+import React, { useState } from 'react';
+
+function Counter() {
+  // Initialize state with useState hook
+  const [count, setCount] = useState(0);
+
+  // Function to increment the counter
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  // Function to decrement the counter
+  const decrement = () => {
+    setCount(prevCount => prevCount - 1);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <h1>Counter</h1>
+      <p style={{ fontSize: '24px' }}>Current Count: {count}</p>
+      <button 
+        onClick={increment} 
+        style={{ margin: '5px', padding: '10px 20px', fontSize: '16px' }}
+      >
+        Increment
+      </button>
+      <button 
+        onClick={decrement} 
+        style={{ margin: '5px', padding: '10px 20px', fontSize: '16px' }}
+      >
+        Decrement
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+//2.  Conceptual Question
+//
+
+//Section 3
+//1. Coding Challenge
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Define the endpoint
+app.get('/message', (req, res) => {
+  res.json({ message: 'Hello, World!' });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+//2.  Conceptual Question
+
+//Section 4
+//1. Coding Challenge
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticProps() {
+  // Define the path to the JSON file
+  const filePath = path.join(process.cwd(), 'data', 'items.json');
+
+  // Read the file contents
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+
+  // Parse the JSON data
+  const items = JSON.parse(fileContents);
+
+  // Return the data as props
+  return {
+    props: {
+      items,
+    },
+  };
+}
+
+const ItemsPage = ({ items }) => {
+  return (
+    <div>
+      <h1>Items List</h1>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemsPage;
+//2.  Conceptual Question
+
+//Section 5
+//1. Coding Challenge
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+INSERT INTO users (name, email) 
+VALUES ('John Doe', 'john.doe@example.com');
+SELECT * FROM users;
+//2.  Conceptual Question
+
+//Section 6
+//1. Conceptual Question
+
+//Section 7
+//1. Coding Challenge
+
+
