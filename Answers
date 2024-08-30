@@ -130,5 +130,16 @@ SELECT * FROM users;
 
 //Section 7
 //1. Coding Challenge
+// Function to handle the [greeting] shortcode
+function greeting_shortcode() {
+    return 'Welcome to My Site!';
+}
 
+// Register the shortcode with WordPress
+function register_greeting_shortcode() {
+    add_shortcode('greeting', 'greeting_shortcode');
+}
+
+// Hook the register function into the 'init' action
+add_action('init', 'register_greeting_shortcode');
 
